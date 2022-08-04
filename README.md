@@ -5,11 +5,11 @@
 <h5 align="center">自动抓取tg频道、订阅地址、公开互联网上的ss、ssr、vmess、trojan节点信息，聚合去重测试可用性后提供节点列表</h5>
 
 <p align="center">
-  <a href="https://github.com/ssrlive/proxypool/actions">
+  <a href="https://github.com/erickeven/proxypool-1/actions">
     <img src="https://img.shields.io/github/workflow/status/zu1k/proxypool/Go?style=flat-square" alt="Github Actions">
   </a>
-  <a href="https://goreportcard.com/report/github.com/ssrlive/proxypool">
-    <img src="https://goreportcard.com/badge/github.com/ssrlive/proxypool?style=flat-square">
+  <a href="https://goreportcard.com/report/github.com/erickeven/proxypool-1">
+    <img src="https://goreportcard.com/badge/github.com/erickeven/proxypool-1?style=flat-square">
   </a>
   <a href="https://github.com/ssrlive/proxypool/releases">
     <img src="https://img.shields.io/github/release/zu1k/proxypool/all.svg?style=flat-square">
@@ -40,7 +40,7 @@
 
 > heroku app域名为appname.herokuapp.com。项目内配置文件为./config/config.yaml
 
-配置文件模板见 config/config.yaml 文件，可选项区域均可不填。完整配置选项请查看[配置文件说明](https://github.com/ssrlive/proxypool/wiki/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E)。
+配置文件模板见 config/config.yaml 文件，可选项区域均可不填。完整配置选项请查看[配置文件说明](https://github.com/erickeven/proxypool-1/wiki/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E)。
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
@@ -58,12 +58,12 @@
 需要 [安装 Golang](https://golang.org/doc/install) ， 然后拉取代码,
 
 ```bash
-go get -u -v github.com/ssrlive/proxypool@latest
+go get -u -v github.com/erickeven/proxypool-1@latest
 ```
 
 或者，拉取代码的另一种方式 
 ```
-git clone https://github.com/ssrlive/proxypool.git
+git clone https://github.com/erickeven/proxypool-1.git
 cd proxypool
 go get
 go build
@@ -79,20 +79,20 @@ go run main.go -c ./config/config.yaml
 
 ### 4. 下载预编译程序
 
-从这里下载预编译好的程序 [release](https://github.com/ssrlive/proxypool/releases)
+从这里下载预编译好的程序 [release](https://github.com/erickeven/proxypool-1/releases)
 
 ### 5. 使用docker
 
 运行下面的命令下载 proxypool 镜像
 
 ```shell
-$ docker pull ghcr.io/ssrlive/proxypool:latest
+  docker pull ghcr.io/erickeven/proxypool-1:latest
 ```
 
 然后运行 proxypool 即可
 
 ```shell
-$ docker run -d --restart=always \
+  docker run -d --restart=always \
   --name=proxypool \
   -p 12580:12580 \
   -v /path/to/config:/proxypool-src/config \
@@ -114,17 +114,17 @@ $ docker run -d --restart=always \
 
 source.yaml 文件中定义了抓取源，需要定期手动维护更新
 
-完整的配置选项见[配置文件说明](https://github.com/ssrlive/proxypool/wiki/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E)
+完整的配置选项见[配置文件说明](https://github.com/erickeven/proxypool-1/wiki/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E)
 
 ### 启动程序
 
 使用 `-c` 参数指定配置文件路径，支持http链接
 
 ```shell
-$ proxypool -c ./config/config.yaml
+  proxypool -c ./config/config.yaml
 ```
 
-如果需要部署到VPS，更多细节请[查看wiki](https://github.com/ssrlive/proxypool/wiki/%E9%83%A8%E7%BD%B2%E5%88%B0VPS-Step-by-Step)。
+如果需要部署到VPS，更多细节请[查看wiki](https://github.com/erickeven/proxypool-1/wiki/%E9%83%A8%E7%BD%B2%E5%88%B0VPS-Step-by-Step)。
 
 ## Clash配置文件
 
